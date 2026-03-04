@@ -1,4 +1,4 @@
-const CustomerTicket = ({ ticket }) => {
+const CustomerTicket = ({ ticket, tasks, setTasks }) => {
   const { id, title, status, description, priority, customer, date } = ticket;
 
   // Status badge color
@@ -11,8 +11,13 @@ const CustomerTicket = ({ ticket }) => {
       : priority === "MEDIUM"
         ? "text-warning"
         : "text-success";
+
+        const handleTasks = (tickets) =>{
+          setTasks([...tasks, tickets])
+        }
+
   return (
-    <div className="card bg-base-100 shadow-md border border-base-200">
+    <div onClick={() => handleTasks(ticket)} className="card bg-base-100 cursor-pointer hover:bg-gray-100 shadow-md border border-base-200">
       <div className="card-body p-5 space-y-3">
         {/* Header */}
         <div className="flex justify-between items-start">

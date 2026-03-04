@@ -2,7 +2,7 @@
 const Banner = () => {
   return (
     <div className="py-20 bg-gray-200 flex items-center justify-center p-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-7xl">
         {/* In-Progress Card */}
         <div className="relative overflow-hidden rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center text-white bg-gradient-to-r from-purple-600 to-indigo-500">
           <div className="absolute inset-0 opacity-20">
