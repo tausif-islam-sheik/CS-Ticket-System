@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1001,
+    "title": "Login Issues - Can't Access Account",
+    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still cannot access it.",
+    "status": "Open",
+    "priority": "HIGH",
+    "customer": "John Smith",
+    "date": "2024-01-15"
+  },
+  {
+    "id": 1002,
+    "title": "Payment Failed - Card Declined",
+    "description": "Customer attempted to pay using Visa ending 1234 but the payment keeps failing despite sufficient balance.",
+    "status": "Open",
+    "priority": "HIGH",
+    "customer": "Sarah Johnson",
+    "date": "2024-01-16"
+  },
+  {
+    "id": 1003,
+    "title": "Unable to Download Invoice",
+    "description": "Customer cannot download their January invoice from the billing section. The download button is unresponsive.",
+    "status": "In Progress",
+    "priority": "MEDIUM",
+    "customer": "Michael Brown",
+    "date": "2024-01-17"
+  },
+  {
+    "id": 1004,
+    "title": "Incorrect Billing Address",
+    "description": "Customer’s billing address shows a different city. They updated it but it still displays the old one.",
+    "status": "Open",
+    "priority": "LOW",
+    "customer": "Emily Davis",
+    "date": "2024-01-18"
+  },
+  {
+    "id": 1005,
+    "title": "App Crash on Launch",
+    "description": "Customer reports that the mobile app crashes immediately upon opening on Android 13.",
+    "status": "Open",
+    "priority": "HIGH",
+    "customer": "David Wilson",
+    "date": "2024-01-19"
+  },
+  {
+    "id": 1006,
+    "title": "Refund Not Processed",
+    "description": "Customer requested a refund two weeks ago but has not received the amount yet.",
+    "status": "In Progress",
+    "priority": "MEDIUM",
+    "customer": "Sophia Taylor",
+    "date": "2024-01-20"
+  },
+  {
+    "id": 1007,
+    "title": "Two-Factor Authentication Issue",
+    "description": "Customer is not receiving 2FA codes on their registered phone number.",
+    "status": "Open",
+    "priority": "HIGH",
+    "customer": "James Anderson",
+    "date": "2024-01-21"
+  },
+  {
+    "id": 1008,
+    "title": "Unable to Update Profile Picture",
+    "description": "Customer tries to upload a new profile picture but gets an 'Upload failed' error.",
+    "status": "Open",
+    "priority": "LOW",
+    "customer": "Olivia Martinez",
+    "date": "2024-01-22"
+  },
+  {
+    "id": 1009,
+    "title": "Email Notifications Not Working",
+    "description": "Customer is not receiving email notifications for ticket updates.",
+    "status": "In Progress",
+    "priority": "MEDIUM",
+    "customer": "William Harris",
+    "date": "2024-01-23"
+  },
+  {
+    "id": 1010,
+    "title": "Password Reset Link Expired",
+    "description": "Customer reports that the password reset link expires immediately after clicking.",
+    "status": "Open",
+    "priority": "HIGH",
+    "customer": "Emma Thompson",
+    "date": "2024-01-24"
+  },
+  {
+    "id": 1011,
+    "title": "Subscription Plan Not Updated",
+    "description": "Customer upgraded their subscription but the dashboard still shows the old plan.",
+    "status": "In Progress",
+    "priority": "MEDIUM",
+    "customer": "Daniel White",
+    "date": "2024-01-25"
+  },
+  {
+    "id": 1012,
+    "title": "Slow Dashboard Loading",
+    "description": "Customer reports that the dashboard takes more than 20 seconds to load.",
+    "status": "Open",
+    "priority": "LOW",
+    "customer": "Ava Moore",
+    "date": "2024-01-26"
+  },
+  {
+    "id": 1013,
+    "title": "Data Sync Issue",
+    "description": "Customer’s data is not syncing between mobile and web applications.",
+    "status": "In Progress",
+    "priority": "HIGH",
+    "customer": "Liam Clark",
+    "date": "2024-01-27"
+  },
+  {
+    "id": 1014,
+    "title": "Error 500 on Reports Page",
+    "description": "Customer encounters a 500 server error when trying to access the reports section.",
+    "status": "Open",
+    "priority": "HIGH",
+    "customer": "Mia Lewis",
+    "date": "2024-01-28"
+  },
+  {
+    "id": 1015,
+    "title": "Unable to Add New Team Member",
+    "description": "Admin user cannot add a new team member due to permission error.",
+    "status": "In Progress",
+    "priority": "MEDIUM",
+    "customer": "Noah Walker",
+    "date": "2024-01-29"
+  }
+]
