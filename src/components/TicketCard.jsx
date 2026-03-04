@@ -1,4 +1,4 @@
-const CustomerTicket = ({ ticket, tasks, setTasks }) => {
+const TicketCard = ({ ticket, tasks, setTasks, progress, setProgress }) => {
   const { id, title, status, description, priority, customer, date } = ticket;
 
   // Status badge color
@@ -12,8 +12,10 @@ const CustomerTicket = ({ ticket, tasks, setTasks }) => {
         ? "text-warning"
         : "text-success";
 
-        const handleTasks = (tickets) =>{
+  const handleTasks = (tickets) =>{
           setTasks([...tasks, tickets])
+          setProgress(progress + 1)
+
         }
 
   return (
@@ -68,4 +70,4 @@ const CustomerTicket = ({ ticket, tasks, setTasks }) => {
   );
 };
 
-export default CustomerTicket;
+export default TicketCard;

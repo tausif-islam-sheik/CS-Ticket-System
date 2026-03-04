@@ -1,5 +1,5 @@
 
-const Banner = () => {
+const Banner = ({progress, resolved}) => {
   return (
     <div className="py-20 bg-gray-200 flex items-center justify-center p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-7xl">
@@ -11,7 +11,7 @@ const Banner = () => {
           </div>
 
           <h2 className="text-xl md:text-2xl font-medium z-10">In-Progress</h2>
-          <p className="text-5xl md:text-6xl font-semibold mt-6 z-10">0</p>
+          <p className="text-5xl md:text-6xl font-semibold mt-6 z-10">{progress}</p>
         </div>
 
         {/* Resolved Card */}
@@ -22,7 +22,7 @@ const Banner = () => {
           </div>
 
           <h2 className="text-xl md:text-2xl font-medium z-10">Resolved</h2>
-          <p className="text-5xl md:text-6xl font-semibold mt-6 z-10">0</p>
+          <p className="text-5xl md:text-6xl font-semibold mt-6 z-10">{resolved}</p>
         </div>
       </div>
     </div>
