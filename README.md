@@ -1,16 +1,118 @@
-# React + Vite
+## 1. What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**JSX (JavaScript XML)** is a syntax extension for JavaScript that allows writing HTML-like code inside JavaScript.
 
-Currently, two official plugins are available:
+### ✅ Why JSX is used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Makes UI code easier to read
+- Combines HTML and JavaScript in one place
+- Helps React create elements efficiently
 
-## React Compiler
+### Example:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```jsx
+const element = <h1>Hello, World!</h1>;
+```
 
-## Expanding the ESLint configuration
+JSX is converted into regular JavaScript behind the scenes.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 2. What is the difference between State and Props?
+
+| Feature     | State            | Props            |
+| ----------- | ---------------- | ---------------- |
+| Managed By  | Component itself | Parent component |
+| Can Change? | Yes              | No (Read-only)   |
+| Purpose     | Dynamic data     | Pass data        |
+
+### 🔹 State
+
+- Local to a component
+- Used for dynamic content
+- Updated using setter functions
+
+### 🔹 Props
+
+- Short for "properties"
+- Used to pass data to child components
+- Immutable (cannot modify directly)
+
+---
+
+## 3. What is the useState hook, and how does it work?
+
+`useState` is a React Hook that allows functional components to manage state.
+
+### Syntax:
+
+```jsx
+import { useState } from "react";
+
+const [count, setCount] = useState(0);
+```
+
+### Explanation:
+
+- `count` → current state value
+- `setCount` → function to update state
+- `0` → initial value
+
+When `setCount()` is called:
+
+1. State updates
+2. Component re-renders
+3. UI updates automatically
+
+---
+
+## 4. How can you share state between components in React?
+
+### ✅ 1. Lifting State Up
+
+Move the state to the closest common parent and pass it down using props.
+
+### ✅ 2. Context API
+
+Share global state without passing props manually at every level.
+
+### ✅ 3. State Management Libraries
+
+For large applications:
+
+- Redux
+- Zustand
+- Recoil
+
+---
+
+## 5. How is event handling done in React?
+
+React uses **camelCase** event names and function references.
+
+### Example:
+
+```jsx
+function handleClick() {
+  alert("Button clicked!");
+}
+
+<button onClick={handleClick}>Click Me</button>;
+```
+
+### Common Events:
+
+- onClick
+- onChange
+- onSubmit
+- onMouseOver
+
+---
+
+## 🎯 Conclusion
+
+- JSX makes UI writing simple.
+- State manages dynamic data.
+- Props pass data between components.
+- useState enables state in functional components.
+- React events use camelCase and functions.
