@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Tasks from "./components/Tasks";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -84,6 +85,7 @@ function App() {
         </div>
       </div>
       <Footer />
+      <Toaster position="center-top" reverseOrder={false} />
     </>
   );
 }

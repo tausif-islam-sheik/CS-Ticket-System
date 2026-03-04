@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 const TaskStatus = ({
   tasks,
   setResolved,
@@ -17,6 +19,9 @@ const TaskStatus = ({
 
     // Remove from Task Status
     handleTasks(task.id);
+
+    // React Hot Toast
+    toast.success("Successfully Complete Task!");
   };
 
   return (

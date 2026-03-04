@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 const TicketCard = ({
   ticket,
   removeFromTickets,
@@ -26,6 +28,9 @@ const TicketCard = ({
 
     // Remove from Customer Tickets
     removeFromTickets(id);
+
+    // React Hot Toast
+    toast.success('Successfully added to Task Section!')
   };
 
   return (
