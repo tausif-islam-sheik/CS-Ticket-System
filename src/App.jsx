@@ -6,19 +6,36 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Tasks from "./components/Tasks";
 import { useState } from "react";
-
-const fetchTickets = async () => {
-  const res = await fetch("/tickets.json");
-  return res.json();
-};
-const ticketsPromise = fetchTickets();
+import { useEffect } from "react";
 
 function App() {
+  const [tickets, setTickets] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [progress, setProgress] = useState(0);
   const [resolved, setResolved] = useState(0);
   const [resolvedTask, setResolvedTask] = useState([]);
 
+  useEffect(() => {
+    const loadTickets = async () => {
+      try {
+        const res = await fetch("/tickets.json");
+        const data = await res.json();
+        setTickets(data);
+      } catch (error) {
+        console.error("Failed to load tickets:", error);
+      }
+    };
+
+    loadTickets();
+  }, []);
+
+  // Remove from Customer Tickets
+  const removeFromTickets = (id) => {
+    const updatedTickets = tickets.filter((ticket) => ticket.id !== id);
+    setTickets(updatedTickets);
+  };
+
+  // Remove from Task Status
   const handleTasks = (id) => {
     const filteredTask = tasks.filter((task) => task.id !== id);
     setTasks(filteredTask);
@@ -44,10 +61,9 @@ function App() {
                 }
               >
                 <CustomerTickets
-                  ticketsPromise={ticketsPromise}
-                  tasks={tasks}
+                  tickets={tickets}
+                  removeFromTickets={removeFromTickets}
                   setTasks={setTasks}
-                  progress={progress}
                   setProgress={setProgress}
                 />
               </Suspense>
@@ -57,9 +73,7 @@ function App() {
             <div>
               <Tasks
                 tasks={tasks}
-                resolved={resolved}
                 setResolved={setResolved}
-                progress={progress}
                 setProgress={setProgress}
                 resolvedTask={resolvedTask}
                 setResolvedTask={setResolvedTask}

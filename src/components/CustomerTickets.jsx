@@ -1,19 +1,20 @@
-import { use } from "react";
 import TicketCard from "./TicketCard";
 
-const CustomerTickets = ({ ticketsPromise, tasks, setTasks, progress, setProgress }) => {
-  const customerTickets = use(ticketsPromise);
-
+const CustomerTickets = ({
+  tickets,
+  removeFromTickets,
+  setTasks,
+  setProgress,
+}) => {
   return (
     <>
       <div className="pb-10 px-3 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-4">
-        {customerTickets.map((ticket) => (
+        {tickets.map((ticket) => (
           <TicketCard
             key={ticket.id}
             ticket={ticket}
-            tasks={tasks}
+            removeFromTickets={removeFromTickets}
             setTasks={setTasks}
-            progress={progress}
             setProgress={setProgress}
           />
         ))}

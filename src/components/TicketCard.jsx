@@ -1,4 +1,9 @@
-const TicketCard = ({ ticket, tasks, setTasks, progress, setProgress }) => {
+const TicketCard = ({
+  ticket,
+  removeFromTickets,
+  setTasks,
+  setProgress,
+}) => {
   const { id, title, status, description, priority, customer, date } = ticket;
 
   // Status badge color
@@ -12,14 +17,22 @@ const TicketCard = ({ ticket, tasks, setTasks, progress, setProgress }) => {
         ? "text-warning"
         : "text-success";
 
-  const handleTasks = (tickets) =>{
-          setTasks([...tasks, tickets])
-          setProgress(progress + 1)
+  const handleClick = () => {
+    // Add to Task Status
+    setTasks((prev) => [...prev, ticket]);
 
-        }
+    // Increase progress
+    setProgress((prev) => prev + 1);
+
+    // Remove from Customer Tickets
+    removeFromTickets(id);
+  };
 
   return (
-    <div onClick={() => handleTasks(ticket)} className="card bg-base-100 cursor-pointer hover:bg-gray-100 shadow-md border border-base-200">
+    <div
+      onClick={handleClick}
+      className="card bg-base-100 cursor-pointer hover:bg-gray-100 shadow-md border border-base-200"
+    >
       <div className="card-body p-5 space-y-3">
         {/* Header */}
         <div className="flex justify-between items-start">

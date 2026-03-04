@@ -1,10 +1,10 @@
 import ResolvedTask from "./ResolvedTask"
 import TaskStatus from "./TaskStatus"
 
-const Tasks = ({tasks, resolved, setResolved, progress, setProgress, resolvedTask, setResolvedTask, handleTasks}) => {
+const Tasks = ({tasks, setResolved, setProgress, resolvedTask, setResolvedTask, handleTasks}) => {
   return (
     <div className="space-y-5 px-2">
-        <TaskStatus tasks={tasks} resolved={resolved} setResolved={setResolved} progress={progress} setProgress={setProgress} resolvedTask={resolvedTask} setResolvedTask={setResolvedTask} handleTasks={handleTasks} />
+        <TaskStatus tasks={tasks} setResolved={setResolved} setProgress={setProgress} resolvedTask={resolvedTask} setResolvedTask={setResolvedTask} handleTasks={handleTasks} />
         <ResolvedTask resolvedTask={resolvedTask} />
     </div>
   )
